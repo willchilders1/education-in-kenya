@@ -1,0 +1,72 @@
+/* custom CSS rules */
+
+/* display none for layout but be careful of license restrictions */
+body {
+  font-family: "Work Sans", sans-serif;
+}
+
+#slider {
+  width: 220px;
+  padding: 8px 25px 8px 15px;
+  background: rgba(75, 75, 75, 0.8);
+  box-shadow: 0 0 10px #f5fbf3;
+  border-radius: 5px;
+  color: #ccc;
+}
+
+#slider .min {
+  float: left;
+}
+
+#slider .max {
+  float: right;
+  margin-right: -15px;
+}
+
+label {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #ccc;
+}
+
+.mapbox-logo, .leaflet-control-attribution {
+  display: none; 
+
+}
+
+.legend-large, .legend-small {
+  border-radius: 50%;
+}
+
+hr.small, hr.large {
+  width: 83px;
+  position: absolute;
+  top: -8px;
+  left: 55px;
+  border: 1px dashed #ccc;     /* overwrite assembly.css rule */
+  margin-top: 8px;            /* overwrite assembly.css rule */
+}
+
+#info {
+  z-index: 1000;
+}
+
+.boys {
+  color: #6E77B0;
+}
+
+.girls {
+  color: #D96D02;
+}
+
+#grade {
+  width: 100%;
+}
+
+#grade h3 span {
+  font-size: 1.3em;
+  margin: 0 20px 0 0;
+  text-align: center;
+}
+
+

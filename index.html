@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset=utf-8 />
+  <title>Primary Girls' and Boys' Education in Kenya</title>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin="" />
+  <script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
+  <link href="https://api.mapbox.com/mapbox-assembly/v0.24.0/assembly.min.css" rel="stylesheet">
+  <link href='css/styles.css' rel='stylesheet' />
+  <link href='https://fonts.googleapis.com/css?family=Work+Sans:400,500,600' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+  <div class='flex-parent viewport-full relative scroll-hidden'>
+    <div class='flex-child w-full w300-ml absolute static-ml left bottom'>
+      <div class='flex-parent flex-parent--column viewport-third h-full-ml hmax-full bg-white py18 px12'>
+        <div class='flex-child flex-child--grow px12 py12 scroll-auto'>
+          <h2 class='txt-h2 mb6'>Education through Grade Eight</h2>
+          <p>Kenya's primary education system is similar in structure to the American system, with children from 5 to 7 starting at grade one and continuing through
+            grade 8. While significant progress has been made on the school systems in Kenya, different geographical areas see the rate of both gender disparity and general enrollment 
+            vastly differ. For intance, the northern and eastern portions of the country, as shown on the map, has far fewer schools with smaller enrollment. Additionally, there are often more boys than girls 
+            enrolled at a young age. This disparity is not nearly as severe nearer to the south, which hosts Kenya's capital city Nairobi. Access to civic services in the south is very different than the north,
+            and ways of life differ drastically between these two points.
+          </p>
+        </div>
+        <footer class='px12 py12 bg-gray-faint txt-s'>
+          <ul>
+            <li>Explore the raw
+              <a class='link' href='#'>data</a>
+            </li>
+            <li>Map authored by
+              <a class='link' href='https://willchilders1.github.io/mapping-portfolio/'>Will Childers</a>
+            </li>
+          </ul>
+        </footer>
+      </div>
+    </div>
+    <div class='flex-child flex-child--grow viewport-twothirds viewport-full-ml'>
+      <div id="map" class='viewport-twothirds viewport-full-ml'></div>
+      <!-- ui slider -->
+      <!-- <div id='grade' class='bg-white round-ml px18 py12'>
+      </div> -->
+      <div id='slider'>
+        <div id='grade'>
+        <div>
+          <h3 class='txt-bold mb12 w180'>Grade:
+            <span class="grade"></span>
+          </h3>
+        </div> <!-- Create the h3 and span elements to show the grade-->
+        <input type='range' min="1" , max="8" , value="1" , step="1" , class="grade" />
+        </div>
+      </div>
+
+      <!-- legend -->
+      <div id='legend' class='bg-white round-ml px18 py12'>
+        <h3 class='txt-bold mb12 w-full mx-auto'>Number of <div class='boys'>Boy</div> and <div class='girls'>Girl </div> Students Enrolled by County</h3>
+        <div id='legend' class='bg-white round px12 py12 relative'>
+          <div class='legend-circles relative w180'>
+            <div class="legend-large border border--gray-light absolute"></div>
+            <div class="legend-small border border--gray-light absolute"></div>
+            <div class="legend-large-label txt-m absolute"></div>
+            <div class="legend-small-label txt-m absolute"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ui info panel -->
+  <div id='info' class='py6 px12 bg-white border border--gray-light round fixed w240'>
+    <p>County: <span></span></p>
+    <p class='girls'>girls <span></span>: <span class='txt-l txt-bold'></span></p>
+    <p class='boys'>boys <span></span>: <span class='txt-l txt-bold'></span></p>
+
+    <!-- Additional elements added here for this step! -->
+    <hr class='txt-hr'>
+    <p class='my6'>trend: grades 1 &ndash; 8</p>
+    <p class='mb6'><span class='girlspark'></span></p>
+    <p><span class='boyspark'></span></p>
+  </div>
+
+  <script src='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.3.1/leaflet-omnivore.min.js'></script>
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-sparklines/2.1.2/jquery.sparkline.min.js"></script>
+  <script src='js/app.js'></script>
+</body>
+
+</html>
